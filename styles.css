@@ -1,0 +1,57 @@
+/* JS ClassList Name */
+.showing {
+  display: block;
+}
+
+.remove {
+  display: none;
+}
+/* JS ClassList Name */
+
+.js-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  padding: 30px 10px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+.setting_value {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.setting_btn {
+  width: 50px;
+  border: none;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.clock-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  padding: 30px 10px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+.clock-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(221, 87, 87);
+}
+
+.startBtn {
+  width: 50px;
+  border: none;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
