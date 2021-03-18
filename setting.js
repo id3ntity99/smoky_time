@@ -15,12 +15,14 @@ function saveValue(text) {
 function handleSubmit(event) {
   event.preventDefault();
   form.style = "display:none";
+  clockForm.style = "display: flex";
   const currentValue = input.value;
   saveValue(currentValue);
 }
 
 function askForTime() {
   form.classList.add(SHOWING_CN);
+  clockForm.style = "display: none";
   save.addEventListener("click", handleSubmit);
 }
 
@@ -29,22 +31,27 @@ var time = localStorage.getItem(USER_TIME);
 var min = "";
 var sec = "";
 
-var timer = setInterval(function () {
-  min = parseInt(time / 60);
-  sec = time % 60;
-  document.getElementById("clock").innerText = min + ":" + sec;
-  time--;
-  if (time < 0) {
-    clearInterval(timer);
-    document.getElementById("clock").innerText = "Time Over";
-  }
-}, 1000);
+function runTimer() {
+  var timer = setInterval(function () {
+    min = parseInt(time / 60);
+    sec = time % 60;
+    document.getElementById("clock").innerText = min + ":" + sec;
+    time--;
+    if (time < 0) {
+      clearInterval(timer);
+      document.getElementById("clock").innerText = "Time Over";
+    }
+  }, 1000);
+}
 
 //===================Timer Function===============================================
+function displayTimer() {
+  document.getElementById("clock").innerText = min + ":" + sec;
+}
 
 function handleStart(event) {
   event.preventDefault();
-  timer;
+  runTimer();
 }
 
 function showTimer() {
